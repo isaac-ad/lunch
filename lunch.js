@@ -12,11 +12,18 @@
  * availableTime is a Number representing the time you have for lunch,
  * in minutes.
  */
-
-function whatToDoForLunch(hungry, availableTime) {
-  console.log("I don't know what to do!");
+ const whatToDoForLunch = function(hungry, availableTime) {
+  if (!hungry) {
+    return "get back to work";
+  }
+  if (availableTime < 20) {
+    return "pick somethingUp and it in the lab";
+  }
+  if (availableTime >= 20 && availableTime <= 30) {
+    return "try a place near by";
+  }
+  return "we are in a bootcamp";
 }
-
 
 /*
  * This is some test runner code that's simply calling our whatToDoForLunch function
